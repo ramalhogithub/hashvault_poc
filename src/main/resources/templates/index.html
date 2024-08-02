@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HashVault App</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Meus Hashes</h1>
+
+<ul>
+    <li th:each="hash : ${hashes}" th:text="${hash}"></li>
+</ul>
+
+<h2>Adicionar Hash</h2>
+<form th:action="@{/addHash}" method="post">
+    <input type="text" name="hash" placeholder="Insira o hash">
+    <button type="submit">Adicionar</button>
+</form>
+
+</body>
+</html>
